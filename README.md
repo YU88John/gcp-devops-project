@@ -16,8 +16,8 @@ The code(`app.py`) uses a python library called `flask`. We need to download `fl
 - Create a Dockerfile <br>
 We will use `python:3.8-slim-buster` base image. You can use an image of your choice which has the same version. We will copy the previous `requirements.txt` into our Dockerfile working directory, and install it with `pip3 install`. 
 
-- Build and test the image locally <br>
-If you have not set up Docker Desktop locally, please proceed the steps in this <a href="https://docs.docker.com/desktop/install/windows-install/">document</a>. <br>
+- Build and run the image locally <br>
+If you do not have local Docker Desktop setup, please proceed the steps in this <a href="https://docs.docker.com/desktop/install/windows-install/">documentation</a>. <br>
 Run the following commands to build and run docker image locally. <br>
     - `docker build -t hello-world .` 
     - Check your image - `docker images`
