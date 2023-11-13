@@ -117,11 +117,10 @@ Edit your `app.py` context to something such as `Hello World 123`. Commit the ch
     - `git add app.py` 
     - `git commit -m "edit app.py"`
     - `git push origin main` 
-<br>
 
-    Ensure the deployment is successful via Cloud Build console. If something fails, check the steps, and check `gke-deployment.yaml` and `cloudbuild.yaml` files. Some of these bugs may be due to naming conflicts. 
+Ensure the deployment is successful via Cloud Build console. If something fails, check the steps, and check `gke-deployment.yaml` and `cloudbuild.yaml` files. Some of these bugs may be due to naming conflicts. 
 
-    Access the application via GKE console: `Services & Ingress > Choose 'gcp-devops-prod' namespace > Endpoints` <br>
+Access the application via GKE console: `Services & Ingress > Choose 'gcp-devops-prod' namespace > Endpoints` <br>
     You will now see the heavily-coded HELLO WORLD application. :P
 <br> <br>
 **** 
