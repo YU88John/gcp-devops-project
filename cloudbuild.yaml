@@ -1,0 +1,5 @@
+steps:
+- name: 'Build docker image'
+  args: ['docker', 'build', '-t', 'gcr.io/$PROJECT_ID/gcpdevops', '.']  # We will just tag the image with project ID
+images: 
+- 'gcr.io/$PROJECT_ID/gcpdevops' # Push the image to container registry
