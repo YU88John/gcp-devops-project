@@ -137,6 +137,8 @@ In Cloud Shell `kubectl` environment:
 While creating trigger:
  - Branch: `^dev$`
 
+ Test
+
 
 
 
