@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: gcp-devops-deployment
-        image: docker.io/kubeje2/hello-py
+        image: docker.io/kubeje2/hello-py-dev
         ports:
         - containerPort: 5000
         env:
