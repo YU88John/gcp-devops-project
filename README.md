@@ -23,7 +23,7 @@ You can clone my repository or start from scratch with your own code.
 - Containerization knowledge
 
 ### Clone the repository
-`git clone https://github.com/YU88John/gcp-devops-project.git` <br>
+```git clone https://github.com/YU88John/gcp-devops-project.git``` <br>
 If you decided to clone the repository, you can skip to [Setup GKE section](#Setup-Google-Kubernetes-Engine-cluster).
 
 
@@ -68,21 +68,24 @@ There are two creation modes for GKE: `standard` and `autopilot`. For this proje
 
 2. Cloud Shell command line <br>
 Paste the following command: <br>
-`gcloud container clusters create "gcp-devops" --zone "us-central1-c" --machine-type "e2-medium" --disk-type "pd-standard" --disk-size "20" --num-nodes "2" --node-locations "us-central1-c"` <br>
+```gcloud container clusters create "gcp-devops" --zone "us-central1-c" --machine-type "e2-medium" --disk-type "pd-standard" --disk-size "20" --num-nodes "2" --node-locations "us-central1-c"``` <br>
 When prompted, click `Authorize`.
 <br>
 <br>
 
 - <u>Setup `kubectl` in Cloud Shell </u> <br>
 Open the Cloud Shell in your GCP console. Type the following command; replacing `<YOUR_PROJECT_NAME>`: <br>
-`gcloud container clusters get-credentials gcp-devops --region us-central1-c --project <YOUR_PROJECT_NAME>` <br>
+```
+gcloud container clusters get-credentials gcp-devops --region us-central1-c --project <YOUR_PROJECT_NAME>
+
+``` 
 Click `Authorize`. Verify by running `kubectl get namespace`. This will list all the namespaces available in your cluster which is `gcp-devops`. <br> <br>
 *Note:* You may need to setup `kubectl` again, if the current Cloud Shell environment is terminated and a new one is launched. <br> <br>
 
 - <u>Create Namespace</u> <br>
 For isolation and as a good practice, we will not use the `default` namespace. We will create a new namespace called `devops-prod`. <br>
-`kubectl create namespace gcp-devops-prod` <br>
-`kubectl get namespaces` - You will see your new namespace <br> <br>
+```kubectl create namespace gcp-devops-prod``` <br>
+```kubectl get namespaces``` - You will see your new namespace <br> <br>
 You can test deploy  into that namespace using the definition file provided in this repository. <br>
 `kubectl apply -f gke-deployment.yaml -n gcp-devops-prod`
 <br> <br>
