@@ -71,7 +71,7 @@ There are two creation modes for GKE: `standard` and `autopilot`. For this proje
 2. Cloud Shell command line <br>
 Paste the following command: 
 ```
-cloud container clusters create "gcp-devops" --zone "us-central1-c" --machine-type "e2-medium" --disk-type "pd-standard" --disk-size "20" --num-nodes "2" --node-locations "us-central1-c"
+gcloud container clusters create "gcp-devops" --zone "us-central1-c" --machine-type "e2-medium" --disk-type "pd-standard" --disk-size "20" --num-nodes "2" --node-locations "us-central1-c"
 
 ``` 
 When prompted, click `Authorize`.
